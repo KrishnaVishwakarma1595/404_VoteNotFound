@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body{
+			height: 100vh;
+			background: linear-gradient(175deg,#f89a1c,#ffb665,#ffd3a2,#fff0e0,#ebfff4,#c0ffdf,#8effc9,#44ffb4);
+			background-repeat: no-repeat;
+			font-family: 'Nunito', sans-serif;
+		}
+		.flexBox{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+		}
+		.ashokChakrmaImage {
+		    display: flex;
+			flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    height: inherit;
+		}
+		.ashok_chakra{
+			width: 300px;
+			height: 300px;
+			animation-name: spin;
+		    animation-duration: 5000ms;
+		    animation-iteration-count: infinite;
+		    animation-timing-function: linear;
+		}
+		.letter,.digit{
+			font-size: 112px;
+		}
+		.digit {
+    		position: absolute;
+		}
+		@keyframes spin{
+			from {transform:rotate(0deg);}
+    		to {transform:rotate(360deg);}
+		}
+		.not_found{
+			position: absolute;
+			right: 0;
+			bottom: 22%;
+			font-weight: 600;
+    		color: #302219;
+		}
+		.msg{
+			height: 100vh;
+			text-align: center;
+			font-size: 100px;
+			display: none;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="ashokChakrmaImage">
+		<div class="digit animated zoomIn delay-4s" style="color: #f89532;top: 8%;left: 43.5%;">4</div>
+		<div class="flexBox animated zoomIn delay-2s">
+			<span class="letter animated zoomIn" style="color: #f89532;animation-delay: 8s;">V</span>
+			<img src="ashok-chakra.png" class="ashok_chakra">
+			<span class="letter animated zoomIn" style="color: #fff;margin-right: 45px;animation-delay: 10s;">T</span>
+			<span class="letter animated zoomIn" style="color: #128807;animation-delay: 12s;">E</span>
+			<div class="not_found animated zoomIn" style="animation-delay: 14s;">NOT FOUND</div>			
+		</div>
+		<div class="digit animated zoomIn" style="color: #128807;bottom: 8%;left: 43.5%;animation-delay: 6s;">4</div>
+	</div>
+	<div class="msg animated fadeIn">
+		Please ensure to make it found this time of voting.
+	</div>
+	<script type="text/javascript">
+		var myvar = setTimeout(function() {
+			document.getElementsByClassName("ashokChakrmaImage")[0].style.display = 'none';
+			document.getElementsByClassName("msg")[0].style.display = 'flex';
+		},16000);
+	</script>
+</body>
+</html>
